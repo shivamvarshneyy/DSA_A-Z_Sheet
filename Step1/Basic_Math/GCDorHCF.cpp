@@ -1,5 +1,5 @@
 #include<bits/stdc++.h>
-#include "GCDorHCF.h"
+#include "../../Header_File/GCDorHCF.h"
 using namespace std;
 class MySolution{
 public:
