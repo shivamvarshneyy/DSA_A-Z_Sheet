@@ -1,3 +1,15 @@
+// | Case        | Time Complexity | Reason                                                   |
+// | ----------- | --------------- | -------------------------------------------------------- |
+// | **Best**    | `O(n log n)`    | Pivot divides array evenly at each level                 |
+// | **Average** | `O(n log n)`    | Random distribution of pivot; balanced recursion         |
+// | **Worst**   | `O(n²)`         | Pivot always picks smallest/largest element (unbalanced) |
+
+
+// | Type                                   | Space Complexity   |
+// | -------------------------------------- | ------------------ |
+// | In-place (standard)                    | `O(log n)`         |
+// | Worst case (no tail call optimization) | `O(n)` stack space |
+
 #include<bits/stdc++.h>
 using namespace std;
 class MySolution{
@@ -35,3 +47,5 @@ int main(){
    delete obj;
    return 0;
 }
+
+

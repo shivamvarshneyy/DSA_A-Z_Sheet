@@ -1,5 +1,11 @@
+// | Variant                        | Best Case | Average Case | Worst Case | Space Complexity | Stable? | In-Place? |
+// | ------------------------------ | --------- | ------------ | ---------- | ---------------- | ------- | --------- |
+// | **Selection Sort** (Iterative) | `O(n²)`   | `O(n²)`      | `O(n²)`    | `O(1)`           | ❌ No   |  ✅ Yes  |
+
+
 #include<bits/stdc++.h>
 using namespace std;
+
 class MySolution{
 public:
    void selectionSort(vector<int>& arr, int n){

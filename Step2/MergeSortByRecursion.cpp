@@ -1,3 +1,12 @@
+// | Case          | Time Complexity | Space Complexity   | Explanation                                            |
+// | ------------- | --------------- | ------------------ | ------------------------------------------------------ |
+// | **Best**      | `O(n log n)`    | `O(n)`             | Always divides array in half; merges take linear time  |
+// | **Average**   | `O(n log n)`    | `O(n)`             | Same as best; performance doesn’t depend on input      |
+// | **Worst**     | `O(n log n)`    | `O(n)`             | Even in worst input, divide + merge is still `n log n` |
+// | **Stable?**   | ✅ Yes          | –                  | Maintains original order of equal elements             |
+// | **In-place?** | ❌ No           | `O(n)` extra space | Temporary arrays used for merging                      |
+
+
 #include<bits/stdc++.h>
 using namespace std;
 class MySolution{

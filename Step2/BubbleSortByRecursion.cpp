@@ -1,3 +1,8 @@
+// | Variant                     | Best Case | Average Case | Worst Case | Space Complexity | Stable? | In-Place? |
+// | --------------------------- | --------- | ------------ | ---------- | ---------------- | ------- | --------- |
+// | **Bubble Sort (Iterative)** | `O(n)`    | `O(n²)`      | `O(n²)`    | `O(1)`           | ✅ Yes   | ✅ Yes  |
+// | **Bubble Sort (Recursive)** | `O(n)`    | `O(n²)`      | `O(n²)`    | `O(n)` (stack)   | ✅ Yes   | ✅ Yes  |
+
 #include<bits/stdc++.h>
 using namespace std;
 class MySolution{
