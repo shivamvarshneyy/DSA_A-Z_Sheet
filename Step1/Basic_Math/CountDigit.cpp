@@ -1,15 +1,11 @@
 #include<bits/stdc++.h>
+#include"../../Header_File/CountDigit.h"
 using namespace std;
 class MySolution{
 public:
     int countDigit(int n){
-        if(n == 0) return 1;
-        int count = 0;
-        while(n!=0){
-            n/=10;
-            count++;
-        }
-        return count;
+        CountDigit obj;
+        return obj.countDigit(n);
     }
 };
 int main(){

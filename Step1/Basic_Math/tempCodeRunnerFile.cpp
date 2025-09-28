@@ -1,0 +1,1 @@
+pow(temp % 10 ,noOfDigit)+0.5
