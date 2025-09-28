@@ -1,6 +1,5 @@
 // | Variant                        | Best Case | Average Case | Worst Case | Space Complexity | Stable? | In-Place? |
 // | ------------------------------ | --------- | ------------ | ---------- | ---------------- | ------- | --------- |
-// | **Insertion Sort (Iterative)** | `O(n)`    | `O(n²)`      | `O(n²)`    | `O(1)`           | ✅ Yes   | ✅ Yes  |
 // | **Insertion Sort (Recursive)** | `O(n)`    | `O(n²)`      | `O(n²)`    | `O(n)` (stack)   | ✅ Yes   | ✅ Yes  |
 
 
