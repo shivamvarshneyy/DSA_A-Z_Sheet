@@ -1,5 +1,13 @@
 # Ignore VS Code settings
 .vscode/
 
-# Ignore executable file
-.exe 
+# Ignore compiled binaries
+*.exe
+*.out
+*.o
+*.obj
+*.class
+
+
+
+
