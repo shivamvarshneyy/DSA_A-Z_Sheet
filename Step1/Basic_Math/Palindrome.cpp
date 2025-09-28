@@ -16,8 +16,8 @@ int main()
     int n;
     cout << "Enter a Number" << endl;
     cin >> n;
-    bool res = obj->isPalindrome(n);
-    cout << res << endl;
+    if(obj->isPalindrome(n))cout<<"true";
+    else cout<<"false";
     delete obj;
     return 0;
 }
