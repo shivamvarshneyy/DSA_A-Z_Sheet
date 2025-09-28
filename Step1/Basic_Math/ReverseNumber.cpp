@@ -1,14 +1,12 @@
 #include<bits/stdc++.h>
+#include "ReverseNumber.h"
 using namespace std;
 class MySolution{
 public:
    int reverseNumber(int n){
-        int res = 0;
-        while(n!=0){
-            res = res*10 + n%10;
-            n /= 10;
-        }
-        return res;
+      if(n<0 || n>=INT_MAX)return 0;
+      ReverseNumber obj;
+      return obj.reverse(n);
    }
 };
 int main(){
