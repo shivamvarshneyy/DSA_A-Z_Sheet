@@ -1,4 +1,4 @@
-class isPrime{
+class IsPrime{
 public:
     bool checkPrime(int n){
         if(n<2)return false;

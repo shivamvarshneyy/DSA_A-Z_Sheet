@@ -4,7 +4,7 @@ using namespace std;
 class MySolution{
 public:
    bool checkPrimeNumber(int n){
-        isPrime prime;
+        IsPrime prime;
         return prime.checkPrime(n);
    }
 };
