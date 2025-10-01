@@ -12,11 +12,12 @@
 // Result: 2
 // Explanation: In the given array, number 2 is missing. So, 2 is the answer.
 
-// | Method           | Time | Space | Works for unsorted?  | Overflow risk?           |
-// | ---------------- | ---- | ----- | -------------------  | ----------------------   |
-// | `missingNumber1` | O(n) | O(1)  | ❌ No (needs sorted) | No                       |
-// | `missingNumber2` | O(n) | O(1)  | ✅ Yes               | ⚠️ Yes (use `long long`) |
-// | `missingNumber3` | O(n) | O(1)  | ✅ Yes               | ✅ No                    |
+// | Method             | Time Complexity | Space Complexity | Works if Array is Sorted?   | Works if Array is Unsorted?  | Overflow Risk?                                         | Notes                                                                                |
+// | ------------------ | --------------- | ---------------- | -------------------------   | ---------------------------  | -----------------------------------------------------  | ------------------------------------------------------------------------------------ |
+// | **missingNumber1** | O(n)            | O(1)             | ✅ Yes                     | ❌ No                        | No                                                     | Works only if input array is sorted ascending.                                       |
+// | **missingNumber2** | O(n)            | O(1)             | ✅ Yes                     | ✅ Yes                       | ⚠️ Yes (if `n*(n+1)/2` exceeds int) → use `long long` | Classic sum method. Your fix with `long long` is correct.                             |
+// | **missingNumber3** | O(n)            | O(1)             | ✅ Yes                     | ✅ Yes                       | ✅ No                                                 | XOR method → avoids overflow. Very efficient.                                         |
+// | **missingNumber4** | O(n)            | O(n)             | ✅ Yes                     | ✅ Yes                       | No                                                     | Uses frequency array (hashing). Simple and intuitive, but requires O(n) extra space. |
 
 
 #include <bits/stdc++.h>
@@ -50,6 +51,14 @@ public:
         ans^=n;
         return ans;
     }
+    int missingNumber4(vector<int> arr, int n){
+        int ans = 0;
+        vector<int> mp(n+1);
+        for(const int& i:arr)mp[i]++;
+        for(int i=1;i<=n;i++){
+            if(mp[i]==0)return i;
+        }
+    }
 };
 
 int main() {
@@ -76,6 +85,9 @@ int main() {
 
     int m = obj->missingNumber3(arr, n);
     cout<<"Missing Number is: "<<m<<endl;
+
+    int o = obj->missingNumber4(arr, n);
+    cout<<"Missing Number is: "<<o<<endl;
 
     delete obj;
     return 0;
