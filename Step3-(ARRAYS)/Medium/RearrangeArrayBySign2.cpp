@@ -33,6 +33,11 @@
 // After alternate ordering, -2 and -4 are left, which would be placed at the end of the ans array.
 
 
+// | Method                  | Time Complexity | Space Complexity                        | Maintains Relative Order?  | Handles Unequal Pos/Neg? |
+// | ----------------------- | --------------- | --------------------------------------- | -------------------------  | ------------------------ |
+// | `rearrangeArrayBySign1` | O(N)            | O(N) (extra positive & negative arrays) | ✅ Yes                     | ✅ Yes                  |
+
+
 #include <bits/stdc++.h>
 using namespace std;
 
