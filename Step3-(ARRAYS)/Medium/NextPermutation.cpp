@@ -16,60 +16,65 @@
 // Output: Arr[] = {1,2,3}
 // Explanation: As we see all permutations of {1,2,3}, we find {3,2,1} at the last position. So, we have to return the topmost permutation.
 
-
 // | Method             | Time Complexity | Space Complexity | Uses STL?                 | Notes                                                                                            |
 // | ------------------ | --------------- | ---------------- | ------------------------  | ------------------------------------------------------------------------------------------------ |
 // | `nextPermutation1` | O(N)            | O(1)             | ✅ `next_permutation` STL | Uses built-in function; simple and optimized.                                                    |
 // | `nextPermutation2` | O(N)            | O(1)             | ❌                        | Manual implementation using standard steps: find pivot, swap, reverse suffix. Handles all cases. |
 
-
 #include <bits/stdc++.h>
 using namespace std;
 
-class MySolution {
+class MySolution
+{
 public:
-    void nextPermutation1(vector<int>& arr, int n){
+    void nextPermutation1(vector<int> &arr, int n)
+    {
         next_permutation(arr.begin(), arr.end());
     }
-    void nextPermutation2(vector<int>& arr, int n){
-        int i=-1;
-        for(i=n-2;i>=0;i--){
-            if(arr[i]<arr[i+1])break;
+    void nextPermutation2(vector<int> &arr, int n)
+    {
+        int i = -1;
+        for (i = n - 2; i >= 0; i--)
+        {
+            if (arr[i] < arr[i + 1])
+                break;
         }
-        if(i==-1){
+        if (i == -1)
+        {
             reverse(arr.begin(), arr.end());
             return;
         }
-        int mini = i+1;
-        for(int j=i+2;j<n;j++){
-            if(arr[j]<arr[mini]){
-                mini = j;
-            }
-        }
-        swap(arr[mini], arr[i]);
-        reverse(arr.begin()+i+1,arr.end());
+        int j = n - 1;
+        while (arr[j] <= arr[i])j--;
+        swap(arr[j], arr[i]);
+        reverse(arr.begin() + i + 1, arr.end());
     }
 };
 
-int main() {
-    MySolution* obj = new MySolution;
+int main()
+{
+    MySolution *obj = new MySolution;
 
     int n;
     cout << "Enter array size:" << endl;
-    
-    while (true) {
+
+    while (true)
+    {
         cin >> n;
-        if (n > 0) break;
+        if (n > 0)
+            break;
         cout << "Invalid size. Re-enter array size: ";
     }
 
     vector<int> arr(n);
     cout << "Enter array elements:" << endl;
-    for (int i = 0; i < n; i++) cin >> arr[i];
+    for (int i = 0; i < n; i++)
+        cin >> arr[i];
 
     obj->nextPermutation2(arr, n);
-    for(const int& i: arr)cout<<i<<" ";
-    cout<<endl;
+    for (const int &i : arr)
+        cout << i << " ";
+    cout << endl;
 
     delete obj;
     return 0;
