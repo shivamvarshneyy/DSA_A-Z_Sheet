@@ -25,6 +25,11 @@
 // Output: 1, 2, 3, 6, 9, 8, 7, 4, 5.
 // Explanation: The output of matrix in spiral form.
 
+// | Method         | Works for Rectangular?  | Time Complexity | Space Complexity | Notes                                                                                             |
+// | -------------- | ----------------------  | --------------- | ---------------- | ------------------------------------------------------------------------------------------------- |
+// | `spiralMatrix` | ✅ Yes                  | O(m×n)          | O(m×n)           | Uses boundary pointers (`top`, `bottom`, `left`, `right`) to traverse the matrix in spiral order. |
+
+
 #include <bits/stdc++.h>
 using namespace std;
 
