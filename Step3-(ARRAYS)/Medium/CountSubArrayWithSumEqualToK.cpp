@@ -66,9 +66,7 @@ public:
         for(int i=0;i<n;i++){
             sum += arr[i];
             rem = sum - target;
-            if(mp.find(rem) != mp.end()){
-                count += mp[rem];
-            }
+            count += mp[rem];
             mp[sum]++;
         }
         return count;
