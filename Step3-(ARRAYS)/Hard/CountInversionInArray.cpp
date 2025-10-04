@@ -21,6 +21,14 @@
 // Result: 7
 // Explanation: There are 7 pairs (5,1), (5,3), (5,2), (5,4),(3,2), (3,1), (2,1) and we have left 2 pairs (2,4) and (1,4) as both are not satisfy our condition. 
 
+/************************************************************************************************************************************************************************************************************************************************************************************************************************************ */
+// | Approach                   | Code Function     | Time Complexity | Space Complexity | Explanation                                                                            | Pros                                                      | Cons                             | When to Use                                         |
+// | -------------------------- | ----------------- | --------------- | ---------------- | -------------------------------------------------------------------------------------- | --------------------------------------------------------- | -------------------------------- | --------------------------------------------------- |
+// | **Brute Force**            | `countInversion1` | **O(n²)**       | **O(1)**         | Loops over all pairs `(i, j)` where `i < j`, checks if `arr[i] > arr[j]`.              | Very easy, beginner-friendly.                             | Extremely slow when `n > 10⁴`.   | For small input sizes (debugging, learning).        |
+// | **Optimized (Merge Sort)** | `countInversion2` | **O(n log n)**  | **O(n)**         | During merge step, counts all inversions where left half > right half, before merging. | Works efficiently for large arrays (up to `10⁵` or more). | Slightly complex implementation. | Use in interviews, coding tests, and real projects. |
+/************************************************************************************************************************************************************************************************************************************************************************************************************************************ */
+
+
 #include <bits/stdc++.h>
 using namespace std;
 
