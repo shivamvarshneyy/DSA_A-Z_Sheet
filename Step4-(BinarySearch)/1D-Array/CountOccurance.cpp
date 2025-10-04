@@ -19,7 +19,6 @@
 // | Method                       | What it Returns                   | Time Complexity | Space Complexity | Notes                                                                      |
 // |----------------------------- |-----------------------------------|---------------- |----------------- |--------------------------------------------------------------------------- |
 // | Binary Search (Manual)       | Count of occurrences of target    | O(log N)        | O(1)             | Finds first and last occurrence using binary search, then calculates count |
-// | Brute Force (Not implemented)| Count of occurrences of target    | O(N)            | O(1)             | Could simply iterate over array and count                                  |
 
 
 #include <bits/stdc++.h>
