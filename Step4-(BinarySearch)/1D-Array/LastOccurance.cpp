@@ -31,7 +31,7 @@ public:
             if(arr[mid]==target){
                 ans = mid;
                 s = mid+1;
-            }if(arr[mid] > target){
+            }else if(arr[mid] > target){
                 e = mid-1;
             }else{
                 s = mid+1;
