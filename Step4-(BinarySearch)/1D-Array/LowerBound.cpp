@@ -29,7 +29,7 @@ using namespace std;
 class MySolution {
 public:
     int lowerBound1(vector<int>& arr, int target, int n){
-        int ans = -1;
+        int ans = n;
         int s = 0;
         int e = n-1;
         int mid = s + (e-s)/2;
