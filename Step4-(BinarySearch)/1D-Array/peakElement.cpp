@@ -26,6 +26,13 @@
 // Result: 0
 // Explanation: In this example, there is only 1 peak that is at the index 0.
 
+
+// | Method         | Approach                    | Time Complexity | Space Complexity | Notes                                                                                           |
+// | -------------- | --------------------------- | --------------- | ---------------- | ----------------------------------------------------------------------------------------------- |
+// | `peakElement`  | Binary Search               | O(log n)        | O(1)             | Efficient, returns **any peak**. Works well for large arrays. Edge elements handled separately. |
+// | `peakElement1` | Linear Scan (`max_element`) | O(n)            | O(1)             | Simple to implement. Always returns the **first maximum**. Not efficient for very large arrays. |
+
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -47,6 +54,9 @@ public:
             }
         }
         return -1;
+    }
+    int peakElement1(vector<int>& arr, int n){
+        return max_element(arr.begin(), arr.end())-arr.begin();
     }
 };
 
