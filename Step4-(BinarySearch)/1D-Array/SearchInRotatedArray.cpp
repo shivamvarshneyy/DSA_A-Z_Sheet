@@ -14,9 +14,11 @@
 // Result: -1
 // Explanation: Here, the target is 3. Since 3 is not present in the given rotated sorted array. Thus, we get the output as -1.
 
-// | Function Name          | Time Complexity | Space Complexity | Notes                                                                                                             |
-// | ---------------------- | --------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------- |
-// | `searchInRotatedArray` | O(log N)        | O(1)             | Standard binary search on rotated sorted array; uses constant extra space and halves search space each iteration. |
+// | **Case**         | **Time Complexity** | **Reason**                                                       | **Space Complexity** | **Reason**                                      |
+// | ---------------- | ------------------- | ---------------------------------------------------------------- | -------------------- | ----------------------------------------------- |
+// | **Best Case**    | **O(1)**            | Target found at the first `mid` check.                           | **O(1)**             | Uses only constant variables (`s`, `e`, `mid`). |
+// | **Average Case** | **O(log N)**        | Each iteration halves the search space (standard binary search). | **O(1)**             | No extra space used.                            |
+// | **Worst Case**   | **O(log N)**        | Always halves the array since no duplicates exist.               | **O(1)**             | Constant auxiliary space.                       |
 
 
 
@@ -36,7 +38,7 @@ public:
                 if(target<=arr[mid] && target>=arr[s])e = mid-1;
                 else s = mid+1;
             }else{
-                if(target>=arr[mid] && target<=arr[e])s = mid+1;
+                if(target>arr[mid] && target<=arr[e])s = mid+1;
                 else e = mid-1;
             }
             mid = s + (e-s)/2;
