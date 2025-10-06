@@ -73,7 +73,7 @@ public:
 };
 
 int main() {
-    MySolution* obj = new MySolution;
+    MySolution obj;
 
     int n;
     cout << "Enter number:" << endl;
@@ -84,18 +84,17 @@ int main() {
         cout << "Enter Positive Value only. Re-enter number: ";
     }
 
-    int a = obj->squareRoot(n);
+    int a = obj.squareRoot(n);
     cout<<"Square root of "<<n<<" is : "<<a<<endl;
 
-    int b = obj->squareRoot1(n);
+    int b = obj.squareRoot1(n);
     cout<<"Square root of "<<n<<" is : "<<b<<endl;
 
-    int c = obj->squareRoot(n);
+    int c = obj.squareRoot(n);
     cout<<"Square root of "<<n<<" is : "<<c<<endl;
 
-    int d = obj->squareRoot(n);
+    int d = obj.squareRoot(n);
     cout<<"Square root of "<<n<<" is : "<<d<<endl;
 
-    delete obj;
     return 0;
 }
