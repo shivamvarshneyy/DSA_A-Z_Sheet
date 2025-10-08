@@ -6,10 +6,12 @@
 
 #include <vector>
 
+template <typename T>
 class BinarySearch {
 public:
-    bool binarySearch(const std::vector<int>& arr, int target) {
-        int low = 0, high = arr.size() - 1;
+    static bool binarySearch(const std::vector<T>& arr, const T& target) {
+        int low = 0;
+        int high = arr.size() - 1;
         while (low <= high) {
             int mid = low + (high - low) / 2;
             if (arr[mid] == target) return true;

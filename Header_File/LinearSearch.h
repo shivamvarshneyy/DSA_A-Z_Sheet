@@ -1,7 +1,9 @@
 #include<vector>
+template <typename T>
 class LinearSearch{
-    bool linearSearch(const std::vector<int>& arr, int target){
-        for(const int& i : arr){
+public:
+    static bool search(const std::vector<T>& arr, T target){
+        for(const T& i : arr){
             if(i == target)return true;
         }
         return false;

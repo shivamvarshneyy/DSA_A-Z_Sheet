@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+#include "../../Header_File/LinearSearch.h"
 using namespace std;
 
 class MySolution {
@@ -8,6 +9,10 @@ public:
             if(arr[i]==target)return i;
         }
         return -1;
+    }
+
+    bool linearSearch2(vector<int>& arr, int target){
+        return LinearSearch<int>::search(arr, target);
     }
 };
 
@@ -33,6 +38,10 @@ int main() {
 
     int pos = obj.linearSearch(arr, target, n);
     cout<<"Position : "<<pos<<endl;
+
+    bool isThere = obj.linearSearch2(arr, target);
+    if(isThere == 1) cout<<"true"<<endl;
+    else cout<<"false"<<endl;
 
     return 0;
 }

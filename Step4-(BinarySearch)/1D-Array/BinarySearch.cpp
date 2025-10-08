@@ -21,7 +21,9 @@ Example :          Let’s say the given array is = {3, 4, 6, 7, 9, 12, 16, 17} 
 */
 
 #include <bits/stdc++.h>
+#include "../../Header_File/BinarySearch.h"
 using namespace std;
+
 
 class MySolution {
 public:
@@ -69,6 +71,10 @@ int main() {
 
     int b = obj->binarySearch2(arr, target, n);
     if(b)cout<<"true"<<endl;
+    else cout<<"false"<<endl;
+
+    bool c = BinarySearch<int>::binarySearch(arr, target);
+    if(c)cout<<"true"<<endl;
     else cout<<"false"<<endl;
 
     delete obj;
