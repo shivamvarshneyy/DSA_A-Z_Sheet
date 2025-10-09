@@ -26,8 +26,7 @@ public:
     // Space Complexity -> O(1);
 
     int largestElementMethod4(vector<int>& arr){
-       MaximumNumberInArray maximumNum;
-       return maximumNum.maximumElementInArray(arr);
+       return MaximumNumberInArray<int>::maxElement(arr);
     }
     // Time Complexity -> O(N);
     // Space Complexity -> O(1);
