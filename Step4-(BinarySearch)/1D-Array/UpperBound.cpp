@@ -25,6 +25,7 @@
 
 
 #include <bits/stdc++.h>
+#include "../../Header_File/UpperBound.h"
 using namespace std;
 
 class MySolution {
@@ -75,6 +76,9 @@ int main() {
 
     int b = obj->upperBound2(arr, target, n);
     cout<<"Upper Bound of array is : "<<b<<endl;
+
+    int c = UpperBound<int>::upperBound(arr, target);
+    cout<<"Upper Bound of array is : "<<c<<endl;
 
     delete obj;
     return 0;
