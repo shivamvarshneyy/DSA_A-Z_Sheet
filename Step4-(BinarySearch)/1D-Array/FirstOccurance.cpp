@@ -24,6 +24,7 @@
 
 
 #include <bits/stdc++.h>
+#include "../../Header_File/FirstOccurrence.h"
 using namespace std;
 
 class MySolution {
@@ -70,6 +71,9 @@ int main() {
 
     int a = obj->firstOccurance(arr, target, n);
     cout<<"first Occurance of element is : "<<a<<endl;
+
+    int b = FirstOccurrence<int>::firstOccurrence(arr, target);
+    cout<<"first Occurance of element is : "<<b<<endl;
 
     delete obj;
     return 0;
