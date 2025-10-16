@@ -18,6 +18,7 @@
 
 
 #include <bits/stdc++.h>
+#include "../../Header_File/LastOccurrence.h"
 using namespace std;
 
 class MySolution {
@@ -64,6 +65,9 @@ int main() {
 
     int a = obj->lastOccurance(arr, target, n);
     cout<<"Last Occurance of element is : "<<a<<endl;
+
+    int b = LastOccurrence<int>::lastOccurrence(arr, target);
+    cout<<"Last Occurance of element is : "<<b<<endl;
 
     delete obj;
     return 0;
