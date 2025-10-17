@@ -34,6 +34,7 @@
 
 
 #include <bits/stdc++.h>
+#include "../../Header_File/PeakElement.h"
 using namespace std;
 
 class MySolution {
@@ -78,6 +79,9 @@ int main() {
 
     int a = obj->peakElement(arr, n);
     cout<<"Peak Element position is : "<<a<<endl;
+
+    int b = PeakElement<int>::peakElement(arr);
+    cout<<"Peak Element position is : "<<b<<endl;
 
     delete obj;
     return 0;
