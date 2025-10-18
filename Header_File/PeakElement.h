@@ -24,9 +24,9 @@ public:
     static int arrayPeakElement(const int* arr, int n){
         int low = 1;
         int high = n-2;
-        if(n==1)return 0;
-        else if(arr[0]>arr[1])return 0;
-        else if(arr[n-2] < arr[n-1])return n-1;
+        if(n==1) return 0;
+        else if(arr[0]>arr[1]) return 0;
+        else if(arr[n-2] < arr[n-1]) return n-1;
         else{
             while(low <= high){
                 int mid = low + (high - low)/2;
