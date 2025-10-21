@@ -1,4 +1,5 @@
 #include<vector>
+
 class Divisors{
 public:
     std::vector<int> divisor(int n) {
