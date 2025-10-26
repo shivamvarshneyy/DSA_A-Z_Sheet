@@ -20,7 +20,6 @@ public:
         }
         return -1;
     }
-
     static int arrayPeakElement(const int* arr, int n){
         int low = 1;
         int high = n-2;
