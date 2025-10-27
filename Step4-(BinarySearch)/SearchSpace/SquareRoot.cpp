@@ -17,6 +17,7 @@
 // Explanation: Square root of 28 is approximately 5.292. So, the floor value will be 5.
 
 #include <bits/stdc++.h>
+#include "../../Header_File/SquareRoot.h"
 using namespace std;
 
 class MySolution {
@@ -95,6 +96,9 @@ int main() {
 
     int d = obj.squareRoot(n);
     cout<<"Square root of "<<n<<" is : "<<d<<endl;
+
+    double e = SquareRoot::squareRoot(n);
+    cout<<"Square root of "<<n<<" is : "<<e<<endl;
 
     return 0;
 }
