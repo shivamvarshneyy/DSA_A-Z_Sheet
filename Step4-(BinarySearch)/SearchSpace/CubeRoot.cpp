@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+#include "../../Header_File/CubeRoot.h"
+using namespace std;
+
+class MySolution {
+public:
+    
+};
+
+int main() {
+    MySolution obj;
+
+    int n;
+    cout << "Enter number:" << endl;
+    
+    cin>>n;
+
+    double a = CubeRoot::cubeRoot(n);
+    cout<<"Cube root of "<<n<<" is : "<<a<<endl;
+
+    return 0;
+}
