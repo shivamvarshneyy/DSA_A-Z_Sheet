@@ -12,6 +12,6 @@ class SquareRoot{
             else if(mid*mid > n)high = mid;
             else low = mid;
         }
-        return high;
+        return low + (high-low)/2.0;
     }
 };
