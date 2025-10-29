@@ -11,7 +11,7 @@ int main() {
     MySolution obj;
 
     int n;
-    cout << "Enter number:" << endl;
+    cout << "Enter a number:" << endl;
     
     cin>>n;
 
