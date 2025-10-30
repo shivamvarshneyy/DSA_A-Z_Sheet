@@ -2,11 +2,6 @@
 #include "../../Header_File/CubeRoot.h"
 using namespace std;
 
-class MySolution {
-public:
-    
-};
-
 int main() {
     MySolution obj;
 
