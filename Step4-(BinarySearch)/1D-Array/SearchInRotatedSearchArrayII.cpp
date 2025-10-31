@@ -76,7 +76,6 @@ int main() {
     if(a == 0)cout<<"false"<<endl;
     else cout<<"true"<<endl;
 
-
     delete obj;
     return 0;
 }
