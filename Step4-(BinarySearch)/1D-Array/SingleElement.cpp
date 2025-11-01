@@ -38,6 +38,7 @@ public:
         for(const auto& i: mp)if(i.second==1)return i.first;
         return 0;
     }
+    
     int singleElement1(vector<int>& arr, int n){
         int ans = 0;
         for(const int& i: arr)ans ^= i;
