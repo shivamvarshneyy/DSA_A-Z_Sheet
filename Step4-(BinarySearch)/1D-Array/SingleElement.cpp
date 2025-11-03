@@ -94,6 +94,7 @@ public:
 };
 
 int main() {
+
     MySolution* obj = new MySolution;
 
     int n;
