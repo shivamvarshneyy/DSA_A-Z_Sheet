@@ -2,8 +2,6 @@
 
 // Problem Statement: Given an array of N integers. Every number in the array except one appears twice. Find the single number in the array.
 
-// Pre-requisite: Binary Search Algorithm
-
 // Examples
 
 // Example 1:
