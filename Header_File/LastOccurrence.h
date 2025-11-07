@@ -3,6 +3,7 @@
 template<typename T>
 class LastOccurrence{
 public: 
+
     static int lastOccurrence(const std::vector<T>& arr, const T target){
         int n = arr.size();
         int low = 0;
