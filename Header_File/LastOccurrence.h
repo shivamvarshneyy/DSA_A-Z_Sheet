@@ -1,5 +1,4 @@
 #include<vector>
-
 template<typename T>
 class LastOccurrence{
 public: 
