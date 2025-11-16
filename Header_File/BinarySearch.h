@@ -3,7 +3,6 @@
 // | Time      | **O(log n)** |
 // | Space     | **O(1)**     |
 
-
 #include <vector>
 
 template <typename T>
