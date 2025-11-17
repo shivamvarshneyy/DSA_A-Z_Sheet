@@ -4,7 +4,6 @@
 // | Space     | **O(1)**     |
 
 #include <vector>
-
 template <typename T>
 class BinarySearch {
 public:
