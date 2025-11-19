@@ -7,6 +7,7 @@
 
 template <typename T>
 
+
 class BinarySearch {
 public:
     static bool binarySearch(const std::vector<T>& arr, const T& target) {
