@@ -10,7 +10,7 @@ using namespace std;
 
 class MySolution {
 public:
-    vector<int> rotate1(vector<int>& arr, int k, int n){
+    vector<int> rotate1(vector<int> arr, int k, int n){
         k = k%n;
         reverse(arr.begin(), arr.begin()+k);
         reverse(arr.begin()+k, arr.end());
@@ -18,7 +18,7 @@ public:
         return arr;
     }
 
-    vector<int> rotate2(vector<int>& arr, int k, int n){
+    vector<int> rotate2(vector<int> arr, int k, int n){
         k = k%n;
         vector<int> ans;
         for(int i=k;i<k+n;i++){
@@ -27,7 +27,7 @@ public:
         return ans;
     }
 
-    vector<int> rotate3(vector<int>& arr, int k, int n){
+    vector<int> rotate3(vector<int> arr, int k, int n){
         k = k%n;
         vector<int> ans;
         for(int i=0;i<k;i++){
@@ -37,7 +37,7 @@ public:
             arr[i-k] = arr[i];
         }
         for(int i=n-k;i<n;i++){
-            arr[i] = ans[i-n+k];
+            arr[i] = ans[i-(n-k)];
         }
         return arr;
     }
