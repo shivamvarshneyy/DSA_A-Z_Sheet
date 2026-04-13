@@ -66,7 +66,8 @@ public:
             int rem = sum-k;
             if(presum.find(rem)!=presum.end()){
                 ans = max(ans, i-presum[rem]);
-            }else{
+            }
+            if(presum.find(sum) != presum.end()){
                 presum[sum] = i;
             }
         }
