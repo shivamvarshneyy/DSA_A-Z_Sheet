@@ -6,7 +6,7 @@ int main(){
    cout<<"Enter a array Size"<<endl;
    cin>>n;
    vector<int> arr(n);
-   cout<<"Enter a array elements"<<endl;
+   cout<<"Enter a array elements"<<endl; 
    map<int, int> mp;
    for(int i=0;i<n;i++){
         cin>>arr[i];

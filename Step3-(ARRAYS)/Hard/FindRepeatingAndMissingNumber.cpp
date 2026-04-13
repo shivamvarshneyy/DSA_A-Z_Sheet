@@ -59,7 +59,7 @@ public:
         int missing = (n*(n+1))/2 - sum;
         return {repeating, missing};
     }
-
+ 
     pair<int, int> findNumber3(vector<int>& arr, int n){ 
         long long sum = 0;
         long long sumOfSquare = 0;

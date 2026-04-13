@@ -65,7 +65,7 @@ public:
                 // left half sorted, so min is in right half
                 s = mid + 1;
             } else {
-                // right half unsorted, min is in left half including mid
+                // right half sorted, min is in left half including mid
                 e = mid;
             }
         }

@@ -45,7 +45,7 @@ public:
             return;
         }
         int j = n - 1;
-        while (arr[j] <= arr[i])j--;
+        while (arr[j] <= arr[i])j--; 
         swap(arr[j], arr[i]);
         reverse(arr.begin() + i + 1, arr.end());
     }

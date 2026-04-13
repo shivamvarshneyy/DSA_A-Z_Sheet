@@ -2,9 +2,8 @@
 #include "../../Header_File/CubeRoot.h"
 using namespace std;
 
-int main() {
-    MySolution obj;
 
+int main() {
     int n;
     cout << "Enter a number:" << endl;
     

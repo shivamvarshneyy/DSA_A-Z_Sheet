@@ -2,7 +2,7 @@
 // | ------------ | --------------- | ---------------- | --------   | ----------------------------------------- |
 // | `rotate1`    | O(n)            | O(n)             | ❌        | When you need a new rotated copy          |
 // | `rotate2`    | O(n)            | O(1)             | ✅        | When modifying the original is OK         |
-// | `rotateLeft` | O(n)            | O(1)             | ✅        | Optimal for general `k`-position rotation |
+// | `rotate3`    | O(n)            | O(1)             | ✅        | Optimal for general `k`-position rotation |
 
 
 #include <bits/stdc++.h>
