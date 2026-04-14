@@ -64,7 +64,32 @@ public:
         return ans;
     }
 
+    // follow-up question
+    int maxSubArrayWithSubarrayPrint(vector<int>& nums) {
+       int sum = 0;
+       int res=INT_MIN;
+       int s = -1;
+       int e = -1;
+       for(int i=0;i<nums.size();i++){
+            if(sum==0)s=i;
+            sum += nums[i];
+            if(sum>res){
+                res = sum;
+                e = i;
+            }
+            if(sum<0){
+                sum=0;
+                s = i+1;
+            }
+        }
+        cout<<"Subbarray is: "<<endl;
+        for(int i=s;i<=e;i++){
+            cout<<nums[i]<<" ";
+        }cout<<endl;
+        return res;
+    }
 };
+
 
 int main() {
     MySolution* obj = new MySolution;
@@ -90,6 +115,10 @@ int main() {
 
     int c = obj->subarraySum3(arr, n);
     cout<<"Maximum Subarray sum is: "<<c<<endl;
+
+    int d = obj->maxSubArrayWithSubarrayPrint(arr);
+    cout<<"Maximum Subarray sum is: "<<d<<endl;
+    
 
     delete obj;
     return 0;

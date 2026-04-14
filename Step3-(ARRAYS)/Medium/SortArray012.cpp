@@ -33,9 +33,9 @@ public:
         int zero = 0;
         int one = 0;
         int two = 0;
-        for(const int& i: arr){
-            if(i==0)zero++;
-            else if(i==1)one++;
+        for(int i=0; i<n; i++){
+            if(arr[i]==0)zero++;
+            else if(arr[i]==1)one++;
             else two++;
         }
         for(int i=0;i<zero;i++)arr[i]=0;
@@ -79,7 +79,7 @@ int main() {
     for (int i = 0; i < n; i++) cin >> arr[i];
 
     obj->sortArray3(arr, n);
-    for(const int& i:arr)cout<<i<<" ";
+    for(int i=0; i<n; i++)cout<<arr[i]<<" ";
     cout<<endl;
 
     delete obj;

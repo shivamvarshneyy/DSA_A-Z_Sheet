@@ -59,7 +59,7 @@ public:
     int longestSubArray3(vector<int>& arr, int k, int n){
         int ans = -1;
         int sum = 0;
-        unordered_map<int, int> presum;
+        map<int, int> presum;
         for(int i=0;i<n;i++){
             sum+=arr[i];
             if(sum==k)ans=i+1;
