@@ -44,7 +44,7 @@ public:
         return {-1, -1};
     }
     pair<int, int> twoSum2(vector<int>& arr, int target, int n){
-        vector<pair<int,int>> temp;
+        vector<pair<int,int> > temp;
         for(int i=0;i<n;i++){
             temp.push_back({arr[i],i});
         } 
