@@ -69,11 +69,11 @@ public:
     vector<int> majorityElement4(vector<int>& arr, int n){
         //Extended Moore’s Voting algorithm
         vector<int> ans;
-        int ele1 = -1;
-        int ele2 = -1;
+        int ele1 = INT_MIN;
+        int ele2 = INT_MIN;
         int count1 = 0;
         int count2 = 0;
-        for(const auto& i : arr){
+        for(const int& i : arr){
             if(count1 == 0 && ele2 != i)ele1 = i,count1=1;
             else if(count2 == 0 && ele1 != i)ele2 = i,count2=1;
             else if(ele1 == i)count1++;
