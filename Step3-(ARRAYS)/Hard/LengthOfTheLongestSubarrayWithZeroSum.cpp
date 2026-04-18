@@ -76,7 +76,7 @@ public:
             if(sum==0)ans = i+1;
             if(mp.find(sum) != mp.end()){
                 ans = max(ans, i - mp[sum]);
-            }else{
+            }if(mp.find(sum)==mp.end()){
                 mp[sum] = i;
             }
         }
