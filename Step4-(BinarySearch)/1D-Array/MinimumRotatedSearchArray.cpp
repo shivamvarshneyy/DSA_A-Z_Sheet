@@ -30,22 +30,19 @@ using namespace std;
 class MySolution {
 public:
     int minInRotatedArray(vector<int>& arr, int n){
-        int ans = INT_MAX;
         int s = 0;
-        int e = n-1;
-        int mid = s + (e-s)/2;
+        int e = arr.size()-1;
+        int ans = INT_MAX;
+        if(arr[s]<=arr[e])return arr[s];
         while(s<=e){
-            if(arr[s] <= arr[e]){
-                ans = arr[s];
-                break;
-            }else if(arr[s] <= arr[mid]){
+            int mid = s+(e-s)/2;
+            if(arr[s] <= arr[mid]){
                 ans = min(ans, arr[s]);
                 s = mid+1;
             }else{
-                ans = min(ans, arr[mid]);
+                ans = min(ans,arr[mid]);
                 e = mid-1;
             }
-            mid = s + (e-s)/2;
         }
         return ans;
     }
