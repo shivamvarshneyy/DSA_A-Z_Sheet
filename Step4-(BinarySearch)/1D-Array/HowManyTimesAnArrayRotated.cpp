@@ -32,34 +32,28 @@ class MySolution {
 public:
     int countOfRotation(vector<int>& arr, int n){
         int s = 0;
-        int e = n-1;
-        int ans = INT_MAX;
-        int res = -1;
-        int mid = s + (e-s)/2;
+        int e = arr.size()-1;
+        int ans = e;
+        if(arr[s]<=arr[e])return s;
         while(s<=e){
-            if(arr[s]<=arr[e])return s;
-            else if(arr[s]<=arr[mid]){
-                if(ans>arr[s]){
-                    ans = arr[s];
-                    res = s;
-                }
-                s = mid + 1;
+            int mid = s+(e-s)/2;
+            if(arr[s] <= arr[mid]){
+                if(arr[s] < arr[ans])
+                ans = min(ans, s);
+                s = mid+1;
             }else{
-                if(ans>arr[mid]){
-                    ans = arr[mid];
-                    res = mid;
-                }
-                e = mid - 1;
+                if(arr[mid] < arr[ans])
+                ans = min(ans, mid);
+                e = mid-1;
             }
-            mid = s + (e-s)/2;
         }
-        return res;
+        return ans;
     }
     int countOfRotation2(vector<int>& arr, int n){
         int s = 0;
         int e = n-1;
+        if(arr[s] <= arr[e]) return s; // already sorted, minimum at start
         while(s <= e){
-            if(arr[s] <= arr[e]) return s; // already sorted, minimum at start
             int mid = s + (e-s)/2;
             if(arr[s] <= arr[mid]){
                 // left half sorted, so min is in right half
@@ -93,6 +87,9 @@ int main() {
     for (int i = 0; i < n; i++) cin >> arr[i];
 
     int a = obj->countOfRotation(arr, n);
+    cout<<"The number of times array is rotated is : "<<a<<endl;
+
+    int b = obj->countOfRotation2(arr, n);
     cout<<"The number of times array is rotated is : "<<a<<endl;
 
     delete obj;
